@@ -6,7 +6,7 @@ a:hover { text-decoration: underline; }
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
 header { padding: 20px 0; border-bottom: 1px solid var(--line); }
 header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.logo { font-weight: 700; font-size: 20px; color: var(--fg); }
+.logo { font-weight: 700; font-size: 20px; color: var(--fg); display: inline-flex; align-items: center; gap: 10px; }
 nav a { margin-left: 18px; color: var(--muted); }
 main { padding: 48px 0 64px; }
 h1 { font-size: 40px; line-height: 1.15; margin: 0 0 12px; }
@@ -28,3 +28,27 @@ footer a { color: var(--muted); margin-right: 18px; }
 .legal h1 { font-size: 32px; }
 .legal p, .legal li { color: var(--muted); }
 .legal h2 { font-size: 21px; margin-top: 32px; }
+.muted { color: var(--muted); font-size: 15px; }
+.app-icon.big { object-fit: cover; flex: none; width: 112px; height: 112px; border-radius: 26px; }
+.badge.soon { color: var(--muted); border-style: dashed; }
+.badge.pro { color: var(--ok); border-color: rgba(123,216,143,.4); }
+.app-head { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.app-head h1 { margin: 0 0 4px; }
+.app-head .lead { margin: 0 0 4px; }
+.price-line { margin: 0; color: var(--ok); font-weight: 600; font-size: 15px; }
+.stores { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
+.btn.soon { background: none; color: var(--muted); border: 1px dashed var(--line); cursor: default; }
+.btn.soon:hover { filter: none; }
+.about { color: var(--muted); max-width: 680px; }
+.about strong { color: var(--fg); }
+@media (max-width: 520px) { h1 { font-size: 30px; } .app-icon.big { width: 88px; height: 88px; } }
+
+.badge { border: 1px solid var(--line); color: var(--fg); }
+.app-top { display: flex; flex-wrap: wrap; gap: 2rem; align-items: start; }
+.app-main { flex: 1; min-width: 280px; }
+/* App card: icon left, name + tagline beside it, badges underneath. */
+.app-card:not(.app-card-face) { display: grid; grid-template-columns: 64px 1fr; column-gap: 14px; align-items: center; }
+.app-card:not(.app-card-face) img { grid-row: span 2; margin-bottom: 0; }
+.app-card:not(.app-card-face) h3 { align-self: end; }
+.app-card:not(.app-card-face) p { align-self: start; margin-bottom: 0; }
+.app-card:not(.app-card-face) .badges { grid-column: 1 / -1; margin-top: 12px; }

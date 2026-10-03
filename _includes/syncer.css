@@ -1,0 +1,369 @@
+/* Verbatim from ~/zepp_syncer/src/web/layout.js (CUSTOM_CSS). Inlined in <head> like there. */
+  /* ── View transitions ──
+     Cross-document, so navigating between the catalog and an app page morphs
+     the shared icon, title and description instead of cutting. Each element is
+     named per app id in the markup, which pairs a card with that app's page and
+     keeps every name unique within a document. */
+  @view-transition { navigation: auto; }
+  ::view-transition-group(*) {
+    animation-duration: 280ms;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 220ms;
+  }
+  /* Names are per app id, so shared styling hangs off view-transition-class. */
+  ::view-transition-group(.vt-icon) {
+    animation-duration: 320ms;
+  }
+  /* Two jobs, one name. Between category pages a card tweens from its old grid
+     slot to its new one, so the list reshuffles. Opening an app, the card's
+     counterpart on that page is a full-viewport panel, so the card grows to fill
+     the screen and cross-fades away — it reads as the card opening. The default
+     cross-fade suits both, so only the duration is set. */
+  ::view-transition-group(.vt-card) {
+    animation-duration: 360ms;
+  }
+  /* Unnamed elements are captured inside the root snapshot, and every named
+     group paints above it — which let the expanding card cover the header until
+     the transition ended. Naming the header gives it a group of its own, and an
+     explicit z-index keeps it on top for the whole animation. */
+  ::view-transition-group(site-header) {
+    z-index: 20;
+  }
+  /* The header is identical on every page, so it should not animate at all.
+     Cross-fading two identical snapshots still dips through a moment of double
+     compositing, which reads as a flicker: drop the outgoing one and show the
+     incoming one immediately. */
+  ::view-transition-old(site-header) {
+    display: none;
+  }
+  ::view-transition-new(site-header) {
+    animation: none;
+  }
+  /* The panel is only a transition target: invisible, inert, and sized to the
+     viewport so the card has something full-page to grow into. */
+  .card-open {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  ::view-transition-old(.vt-text),
+  ::view-transition-new(.vt-text) {
+    /* Text reflows between the card and the page; height: auto keeps the
+       snapshots from being squashed to each other's box. */
+    height: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    @view-transition { navigation: none; }
+  }
+
+  /* ── App grid ── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  /* Phones: two cards per row down to 360px, one below that. Fixed column
+     counts rather than auto-fill, whose 200px minimum would drop to a single
+     column well before 360px. */
+  @media (max-width: 575px) {
+    .app-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    .app-card { padding: 0.75rem; }
+    .app-card img { width: 56px; height: 56px; }
+    .app-card-face img { width: 100%; height: auto; }
+  }
+  @media (max-width: 359px) {
+    .app-grid { grid-template-columns: 1fr; }
+  }
+
+  .app-card {
+    display: block;
+    text-decoration: none;
+    color: #e8e8f0;
+    /* Glass without backdrop-filter, so nothing is lost when the card is
+       rasterised for a view transition. A dark tint stands in for the blur by
+       hiding the busy photo behind, a diagonal sheen plus a corner highlight
+       fake the specular reflection, and an inset top edge reads as the lit rim
+       of a pane. */
+    background:
+      linear-gradient(150deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.07) 100%),
+      radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,0.13), transparent 55%),
+      rgba(26, 22, 58, 0.62);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.22),
+      inset 0 -1px 0 rgba(255,255,255,0.05),
+      0 6px 20px rgba(0,0,0,0.28);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .app-card:hover {
+    background:
+      linear-gradient(150deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.1) 100%),
+      radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,0.16), transparent 55%),
+      rgba(34, 28, 72, 0.66);
+    border-color: rgba(167,139,250,0.5);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.28),
+      0 8px 32px rgba(167,139,250,0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #e8e8f0;
+  }
+  .app-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  /* A watch face card leads with a render of the face, not an icon, so it fills
+     the card width. Double class so it beats the .app-card img rule regardless
+     of the order these rules end up in. */
+  .app-card.app-card-face img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-width: 100%;
+    border-radius: 18px;
+    margin-bottom: 0.6rem;
+  }
+  .app-card h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #f0f0ff;
+  }
+  .app-card p {
+    font-size: 0.8rem;
+    margin: 0 0 0.5rem;
+    color: rgba(232,232,240,0.6);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── Badges ── */
+  .badges { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .badge-free { background: rgba(52,211,153,0.2); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.3); }
+  .badge-paid { background: rgba(251,191,36,0.2); color: #fde68a; border: 1px solid rgba(251,191,36,0.3); }
+  .badge-iap  { background: rgba(167,139,250,0.2); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.3); }
+  .badge-size    { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.25); }
+  .badge-version { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.25); }
+
+  /* ── Screenshots mockup ── */
+  .screenshots-mockup {
+    position: relative;
+    width: 260px;
+    height: 320px;
+    margin: 1rem 0;
+  }
+  .mockup-device {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .mockup-scroll {
+    position: absolute;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mockup-scroll::-webkit-scrollbar { display: none; }
+  .mockup-scroll > img {
+    position: sticky;
+    left: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+  }
+  /* Round screen — circle clip */
+  .mockup-scroll--round {
+    top: 24%;
+    left: 17%;
+    width: 66%;
+    height: 53%;
+    clip-path: circle(50%);
+  }
+  /* Square/rect screen */
+  .mockup-scroll--square {
+    top: 24%;
+    left: 22%;
+    width: 57%;
+    height: 52%;
+    clip-path: inset(0 round 8%);
+  }
+  /* Band form factor */
+  .mockup-scroll--band {
+    top: 18%;
+    left: 22%;
+    width: 56%;
+    height: 52%;
+    clip-path: inset(0 round 8%);
+  }
+
+  /* ── Device scroll ── */
+  @property --left-fade  { syntax: '<length>'; inherits: false; initial-value: 0px; }
+  @property --right-fade { syntax: '<length>'; inherits: false; initial-value: 0px; }
+  @keyframes show-left-shadow  { from { --left-fade:  0px; } to { --left-fade:  50px; } }
+  @keyframes show-right-shadow { from { --right-fade: 0px; } to { --right-fade: 50px; } }
+  @keyframes hide-right-shadow { from { --right-fade: 50px; } to { --right-fade: 0px; } }
+  @keyframes show-left-arrow  { from { opacity: 0; transform: translateY(-50%) scale(0.7); }
+                                 to   { opacity: 1; transform: translateY(-50%) scale(1);   } }
+  @keyframes show-right-arrow { from { opacity: 0; transform: translateY(-50%) scale(0.7); }
+                                 to   { opacity: 1; transform: translateY(-50%) scale(1);   } }
+  @keyframes hide-right-arrow { from { opacity: 1; transform: translateY(-50%) scale(1);   }
+                                 to   { opacity: 0; transform: translateY(-50%) scale(0.7); } }
+
+  .device-scroll-wrap {
+    position: relative;
+    timeline-scope: --device-scroll;
+  }
+  .device-scroll-wrap::before,
+  .device-scroll-wrap::after {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    pointer-events: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .device-scroll-wrap::before {
+    content: '‹';
+    left: 4px;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.7);
+    animation: show-left-arrow linear both;
+    animation-timeline: --device-scroll;
+    animation-range: 0px 80px;
+  }
+  .device-scroll-wrap::after {
+    content: '›';
+    right: 4px;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.7);
+    animation: show-right-arrow linear both, hide-right-arrow linear both;
+    animation-timeline: --device-scroll, --device-scroll;
+    animation-range: 0px 10px, calc(100% - 80px) 100%;
+  }
+
+  .device-scroll {
+    scroll-timeline-name: --device-scroll;
+    scroll-timeline-axis: inline;
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.5rem 0 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    mask-image:
+      linear-gradient(to right, transparent, black var(--left-fade)),
+      linear-gradient(to left,  transparent, black var(--right-fade));
+    mask-composite: intersect;
+    -webkit-mask-image:
+      linear-gradient(to right, transparent, black var(--left-fade)),
+      linear-gradient(to left,  transparent, black var(--right-fade));
+    -webkit-mask-composite: source-in;
+    animation: show-left-shadow linear both, show-right-shadow linear both, hide-right-shadow linear both;
+    animation-timeline: scroll(self inline), scroll(self inline), scroll(self inline);
+    animation-range: 0px 80px, 0px 10px, calc(100% - 80px) 100%;
+  }
+  .device-scroll::-webkit-scrollbar { display: none; }
+  .device-chip {
+    position: relative;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 16px;
+    height: 90px;
+  }
+  .device-chip img,
+  .device-img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.25);
+    min-width: 80px;
+  }
+  .device-img-placeholder {
+    background: rgba(255,255,255,0.05);
+  }
+  .device-chip span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.7);
+    pointer-events: none;
+  }
+  a.device-chip {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a.device-chip:hover img { filter: brightness(1.15); }
+  a.device-chip--active {
+    outline: 2px solid var(--brand);
+    border-radius: 16px;
+  }
+  .device-chip small {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    text-align: center;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+    pointer-events: none;
+  }
+

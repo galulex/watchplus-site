@@ -1,0 +1,117 @@
+# Zepp OS watches, newest first. Copied from ~/zepp_syncer/src/sync.js.
+- name: "Amazfit Active 3 Premium"
+  label: "Active 3 Premium"
+  shape: round
+  image: https://store-cdn.zepp.com/light-app-store/20260119/80e1f5b688130c89815b61797326f86a.png
+- name: "Amazfit T-Rex Ultra 2"
+  label: "T-Rex Ultra<br>2"
+  shape: round
+  image: https://store-cdn.zepp.com/light-app-store/20251224/ee6979467e699f434b51aca3d84dd329.png
+- name: "Amazfit Active Max"
+  label: "Active<br>Max"
+  shape: square
+  image: https://img-cdn.zepp.com/watchface-maker/20251014/02af17cd37a9e2592f88cf35086ed657.png
+- name: "Amazfit T-Rex 3 Pro (44mm)"
+  label: "T-Rex 3 Pro (44mm)"
+  shape: round
+  image: https://img-cdn.zepp.com/dial/20250904/84809ab184c436ed73e4ac50d6a3520b.png
+- name: "Amazfit T-Rex 3 Pro (48mm)"
+  label: "T-Rex 3 Pro (48mm)"
+  shape: round
+  image: https://img-cdn.zepp.com/dial/20250807/1f6ce98f820ef906ea3dc7a1236979e4.png
+- name: "Amazfit Active 2 (Square)"
+  label: "Active 2 (Square)"
+  shape: square
+  image: https://img-cdn.zepp.com/equipment/20250428/2fa3f280fee624da5c5a4abe6da0baf4.png
+- name: "Amazfit Bip 6"
+  label: "Bip 6"
+  shape: square
+  image: https://img-cdn.zepp.com/equipment/20250210/ec6833c77e06ec47ae538f1b89d88dfc.png
+- name: "Amazfit Balance 2"
+  label: "Balance<br>2"
+  shape: round
+  image: https://img-cdn.zepp.com/equipment/20250512/0fe674a2ddf14094f635a81bdffa82a1.png
+- name: "Amazfit Active 2 (Round)"
+  label: "Active 2 (Round)"
+  shape: round
+  image: https://img-cdn.zepp.com/equipment/20250121/2aa1afd3db78fb26f4017d07f4be4f3f.png
+- name: "Amazfit Bip 5 Unity"
+  label: "Bip 5<br>Unity"
+  shape: square
+  image: https://img-cdn.zepp.com/dial/20240201/d8e991df3711205b3d23438ae8c5a1a6.png
+- name: "Amazfit T-Rex 3"
+  label: "T-Rex<br>3"
+  shape: round
+  image: https://img-cdn.zepp.com/equipment/20240816/4ab50d30812fee43770c4124a3e439aa.png
+- name: "Amazfit Balance"
+  label: "Balance"
+  shape: round
+  image: https://img-cdn.zepp.com/20230725/3a1b142db75ae0d6b10d1c0c40525187.png
+- name: "Amazfit Bip 5"
+  label: "Bip 5"
+  shape: square
+  image: https://img-cdn.zepp.com/20230816/7685ddcde137d59625931e49ba39f406.png
+- name: "Amazfit Active Edge"
+  label: "Active<br>Edge"
+  shape: round
+  image: https://img-cdn.zepp.com/20230915/877f18af5afb06c75182bcc780eeb0fb.png
+- name: "Amazfit Active"
+  label: "Active"
+  shape: square
+  image: https://img-cdn.zepp.com/20230724/7842be9424995d69e3abf6c6a8e95320.png
+- name: "Amazfit Cheetah (Square)"
+  label: "Cheetah (Square)"
+  shape: square
+  image: https://img-cdn.zepp.com/20230529/ad495f89d55975183c96a138b2c5236a.png
+- name: "Amazfit Cheetah (Round)"
+  label: "Cheetah (Round)"
+  shape: round
+  image: https://img-cdn.zepp.com/20230423/10f3c5983375dab9d7fc494bddf7bd53.png
+- name: "Amazfit Cheetah Pro"
+  label: "Cheetah<br>Pro"
+  shape: round
+  image: https://img-cdn.zepp.com/20230510/abdec7a0b80f25b609c33f4e8527f063.png
+- name: "Amazfit GTS 4"
+  label: "GTS 4"
+  shape: square
+  image: https://img-cdn.huami.com/20220802/a6e3f818d7c11c60b24043ad08268623.png
+- name: "Amazfit GTR 4"
+  label: "GTR 4"
+  shape: round
+  image: https://img-cdn.huami.com/20221013/0d0d79f95f11606574b19e699af53d6a.png
+- name: "Amazfit T-Rex Ultra"
+  label: "T-Rex<br>Ultra"
+  shape: round
+  image: https://img-cdn.huami.com/20221121/9dd0462b4407fac460acf8271c24adbf.png
+- name: "Amazfit GTR 3 Pro"
+  label: "GTR 3<br>Pro"
+  shape: round
+  image: https://img-cdn.huami.com/20220418/b621d452e7aff61cbf9814a5fec872dc.png
+- name: "Amazfit T-Rex 2"
+  label: "T-Rex<br>2"
+  shape: round
+  image: https://img-cdn.huami.com/20220407/51ecad6e3cbab68133c24480e57b69db.png
+- name: "Amazfit Falcon"
+  label: "Falcon"
+  shape: round
+  image: https://img-cdn.huami.com/20211227/b513c7e72946fe696df07efe0d7d971c1640590095840.png
+- name: "Amazfit Band 7"
+  label: "Band<br>7"
+  shape: band
+  image: https://img-cdn.huami.com/20220513/113e439a345ec56823495f8346699667.png
+- name: "Amazfit GTR Mini"
+  label: "GTR<br>Mini"
+  shape: round
+  image: https://img-cdn.zepp.com/20230310/df4dde8c6d0b884020b610809191621d.png
+- name: "Amazfit GTS 4 mini"
+  label: "GTS 4<br>mini"
+  shape: square
+  image: https://img-cdn.huami.com/20220513/a84b4dbfbc16f13bb0276b076016d539.png
+- name: "Amazfit GTR 3"
+  label: "GTR 3"
+  shape: round
+  image: https://img-cdn.huami.com/20210830/21d6fb0c1b30a1bf5e934263011469761630305167018.png
+- name: "Amazfit GTS 3"
+  label: "GTS 3"
+  shape: square
+  image: https://img-cdn.huami.com/20210830/2b4863a69912a02a36dfe276e16ac0341630305225993.png

@@ -1,0 +1,12 @@
+title: Watch+
+url: https://watch.ab.team
+markdown: kramdown
+collections:
+  apps:
+    output: true
+    permalink: /apps/:name/
+defaults:
+  - scope: { type: apps }
+    values: { layout: app }
+exclude: [README.md]
+plugins: [jekyll-sitemap]

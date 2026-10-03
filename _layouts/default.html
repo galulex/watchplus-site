@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+{% if page.collection == "apps" %}{% capture seo_title %}{{ page.name }} — {{ page.tagline }} | Watch+{% endcapture %}{% capture seo_desc %}{{ page.tagline }}. {{ page.excerpt | strip_html | normalize_whitespace | strip }}{% endcapture %}{% assign seo_image = page.icon %}{% else %}{% assign seo_title = page.title %}{% assign seo_desc = page.description %}{% assign seo_image = page.og_image %}{% endif %}
+{% assign seo_desc = seo_desc | strip | truncate: 160 %}
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ seo_desc | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="Watch+">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:description" content="{{ seo_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if seo_image %}<meta property="og:image" content="{{ seo_image }}">{% endif %}
+<meta name="twitter:card" content="summary">
+{% if page.collection == "apps" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":{{ page.name | jsonify }},"description":{{ seo_desc | jsonify }},"image":{{ page.icon | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"applicationCategory":"{% if page.kind == "watchface" %}WatchFace{% else %}WatchApplication{% endif %}","operatingSystem":"Zepp OS{% if page.garmin %}, Garmin Connect IQ{% endif %}","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Active Bridge, LLC"}}</script>{% endif %}
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<style>{% include syncer.css %}</style>
+</head>
+<body>
+<header style="view-transition-name:site-header"><div class="wrap"><a class="logo" href="/"><img src="/logo.svg" alt="" width="30" height="30">Watch+</a><nav><a href="/#apps">Apps</a><a href="/#faq">FAQ</a><a href="mailto:watch@ab.team">Support</a></nav></div></header>
+<main class="wrap">
+{{ content }}
+</main>
+<footer><div class="wrap"><a href="/terms.html">Terms of Service</a><a href="/privacy.html">Privacy Policy</a><a href="/refunds.html">Refund Policy</a><a href="mailto:watch@ab.team">watch@ab.team</a><div style="margin-top:10px">© 2026 Active Bridge, LLC. Amazfit and Zepp OS are trademarks of Zepp Health. Garmin and Connect IQ are trademarks of Garmin Ltd. Tesla is a trademark of Tesla, Inc. Not affiliated with any of them.</div></div></footer>
+<script>
+    // Hint that the screenshots can be swiped: nudge a quarter of one along.
+    (function () {
+      var strip = document.querySelector('.mockup-scroll');
+      if (!strip || strip.children.length < 2) return;
+      setTimeout(function () {
+        // Snapping is off for the whole gesture: it would otherwise complete the
+        // nudge to the next screenshot. Nothing pulls the strip back on its own,
+        // so the return is explicit.
+        strip.style.scrollSnapType = 'none';
+        strip.scrollBy({
+          left: strip.firstElementChild.getBoundingClientRect().width,
+          behavior: 'smooth',
+        });
+        setTimeout(function () {
+          strip.scrollTo({ left: 0, behavior: 'smooth' });
+          strip.addEventListener('scrollend', function () {
+            strip.style.scrollSnapType = '';
+          }, { once: true });
+        }, 450);
+      }, 400);
+    })();
+</script>
+</body></html>

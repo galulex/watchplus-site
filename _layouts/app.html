@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign app = page %}{% assign id = app.slug %}
+{% assign shape = app.shape | default: "round" %}
+{% if shape == "square" %}{% assign frame = "Amazfit GTS 4" %}{% elsif shape == "band" %}{% assign frame = "Amazfit Band 7" %}{% else %}{% assign frame = "Amazfit GTR 4" %}{% endif %}
+{% assign frame = site.data.devices | where: "name", frame | first %}
+{% assign shots = app.shots | default: empty %}{% if shots.size == 0 and app.kind == "watchface" %}{% assign shots = app.icon | split: "|" %}{% endif %}
+<div class="card-open" aria-hidden="true" style="view-transition-name:app-card-{{ id }};view-transition-class:vt-card"></div>
+<div class="app-top">
+<div class="app-main">
+<div class="app-head">
+  <img class="app-icon big" src="{{ app.icon }}" alt="{{ app.name }}" style="view-transition-name:app-icon-{{ id }};view-transition-class:vt-icon">
+  <div>
+    <h1 style="view-transition-name:app-name-{{ id }};view-transition-class:vt-text">{{ app.name }}</h1>
+    <p class="lead" style="view-transition-name:app-desc-{{ id }};view-transition-class:vt-text">{{ app.tagline }}</p>
+    <p class="price-line">Free{% if app.pro %} · Pro {{ app.pro }}{% endif %}</p>
+  </div>
+</div>
+<div class="stores">
+  <a class="btn" href="amazfit://com.huami.watch.hmwatchmanager/action?name=appStore&amp;target=detail&amp;data=%7B%22id%22%3A%22{{ app.zepp }}%22%7D">Install via Zepp</a>
+  {% if app.garmin %}<a class="btn" href="https://apps.garmin.com/apps/{{ app.garmin }}">Get on Garmin</a>
+  {% else %}<span class="btn soon">Garmin · coming soon</span>{% endif %}
+</div>
+</div>
+{% if shots.size > 0 %}<div class="screenshots-mockup">
+<div class="mockup-scroll mockup-scroll--{{ shape }}">{% for s in shots %}<img src="{{ s }}" alt="Screenshot" loading="lazy">{% endfor %}</div>
+<img class="mockup-device" src="{{ frame.image }}" alt="" aria-hidden="true" loading="lazy">
+</div>{% endif %}
+</div>
+<section><h2>Description</h2><div class="about">{{ content }}</div></section>
+<section><h2>Supported watches</h2>
+<div class="device-scroll-wrap"><div class="device-scroll">{% for d in site.data.devices %}{% unless app.devices_except contains d.name %}<div class="device-chip"><img src="{{ d.image }}" alt="{{ d.name }}" loading="lazy"><span>{{ d.label }}</span></div>{% endunless %}{% endfor %}</div></div>
+</section>
+<p class="muted">Not opening? In the Zepp app on your phone: Profile → App Store → search “{{ app.name }}”.</p>
+<p><a href="/#apps">← All apps</a></p>
