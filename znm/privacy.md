@@ -59,7 +59,8 @@ On your device only, in the app's private storage, ZNM keeps:
   text), capped at the most recent entries,
 - a diagnostic log of the notifications ZNM handles (app, title and text, and what ZNM did with
   them), capped at 512 KB with the oldest lines dropped. It never leaves your phone unless you
-  tap **Share log** and pick where to send it, for example to us when you report a problem,
+  tap **Report a problem** and send the email it prepares to us (it also lists your phone
+  model, Android, ZNM and Zepp versions and ZNM's settings, so we can reproduce the problem),
 - while a ZNM copy is showing, a scaled-down copy of its picture, deleted as soon as the copy
   is removed or replaced.
 
