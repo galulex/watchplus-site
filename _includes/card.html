@@ -1,7 +1,6 @@
-{% assign a = include.app %}{% assign id = a.slug %}
-    <a class="app-card{% if a.kind == "watchface" %} app-card-face{% endif %}" href="{{ a.url }}" style="view-transition-name:app-card-{{ id }};view-transition-class:vt-card">
-      <img src="{{ a.icon }}" alt="{{ a.name }}" loading="lazy" width="64" height="64" style="view-transition-name:app-icon-{{ id }};view-transition-class:vt-icon">
-      <h3 style="view-transition-name:app-name-{{ id }};view-transition-class:vt-text">{{ a.name }}</h3>
-      <p style="view-transition-name:app-desc-{{ id }};view-transition-class:vt-text">{{ a.tagline }}</p>
-      <div class="badges"><span class="badge">Zepp</span>{% if a.garmin %}<span class="badge">Garmin</span>{% else %}<span class="badge soon">Garmin soon</span>{% endif %}{% if a.pro %}<span class="badge pro">Pro</span>{% endif %}</div>
-    </a>
+{% assign a = include.app %}<a class="card{% if a.garmin or a.os == "garmin" %} is-garmin{% endif %}{% if a.os == "garmin" %} is-gonly{% endif %}{% if a.pro %} is-pro{% endif %}{% if a.new %} is-new{% endif %}{% if a.soon %} is-soon{% endif %} rise" href="{{ a.url }}" style="--a:{{ a.accent }}">
+  <img src="/assets/apps/{{ a.slug }}/icon.webp" alt="" width="72" height="72" loading="lazy" style="view-transition-name:icon-{{ a.slug }}">
+  <h3>{{ a.name }}</h3>
+  <p>{{ a.tagline }}</p>
+  <div class="tags">{% if a.soon %}<span class="tag soon">Coming soon</span>{% elsif a.zepp %}<span class="tag">Amazfit</span>{% endif %}{% if a.garmin or a.os == "garmin" %}<span class="tag">Garmin</span>{% endif %}{% if a.companion %}<span class="tag">Web</span>{% endif %}{% if a.pro %}<span class="tag pro">Pro</span>{% endif %}{% if a.new %}<span class="tag new">New</span>{% endif %}</div>
+</a>

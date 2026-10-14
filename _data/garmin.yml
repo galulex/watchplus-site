@@ -1,0 +1,215 @@
+# Garmin watches our Connect IQ apps support, from the Garmin store (2026-10-14).
+- name: Approach S50
+  image: "/assets/garmin/approach-s50.webp"
+- name: Approach S70 (42mm)
+  image: "/assets/garmin/approach-s70-42mm.webp"
+- name: Approach S70 (47mm)
+  image: "/assets/garmin/approach-s70-47mm.webp"
+- name: D2 Air X10
+  image: "/assets/garmin/d2-air-x10.webp"
+- name: D2 Air X15
+  image: "/assets/garmin/d2-air-x15.webp"
+- name: D2 Mach 1
+  image: "/assets/garmin/d2-mach-1.webp"
+- name: D2 Mach 1 Pro
+  image: "/assets/garmin/d2-mach-1-pro.webp"
+- name: D2 Mach 2
+  image: "/assets/garmin/d2-mach-2.webp"
+- name: D2 Mach 2 Pro
+  image: "/assets/garmin/d2-mach-2-pro.webp"
+- name: Descent G2
+  image: "/assets/garmin/descent-g2.webp"
+- name: Descent MK3 - 43mm
+  image: "/assets/garmin/descent-mk3-43mm.webp"
+- name: Descent MK3i - 51mm
+  image: "/assets/garmin/descent-mk3i-51mm.webp"
+- name: Enduro
+  image: "/assets/garmin/enduro.webp"
+- name: Enduro 2
+  image: "/assets/garmin/enduro-2.webp"
+- name: Enduro 3
+  image: "/assets/garmin/enduro-3.webp"
+- name: Enduro 4
+  image: "/assets/garmin/enduro-4.webp"
+- name: epix (Gen 2)
+  image: "/assets/garmin/epix-gen-2.webp"
+- name: epix Pro (42mm)
+  image: "/assets/garmin/epix-pro-42mm.webp"
+- name: epix Pro (47mm)
+  image: "/assets/garmin/epix-pro-47mm.webp"
+- name: epix Pro (51mm)
+  image: "/assets/garmin/epix-pro-51mm.webp"
+- name: fēnix 5
+  image: "/assets/garmin/f-nix-5.webp"
+- name: fēnix 5 Plus
+  image: "/assets/garmin/f-nix-5-plus.webp"
+- name: fēnix 5S
+  image: "/assets/garmin/f-nix-5s.webp"
+- name: fēnix 5S Plus
+  image: "/assets/garmin/f-nix-5s-plus.webp"
+- name: fēnix 5X
+  image: "/assets/garmin/f-nix-5x.webp"
+- name: fēnix 5X Plus
+  image: "/assets/garmin/f-nix-5x-plus.webp"
+- name: fēnix 6
+  image: "/assets/garmin/f-nix-6.webp"
+- name: fēnix 6 Dual Power
+  image: "/assets/garmin/f-nix-6-dual-power.webp"
+- name: fēnix 6 Pro
+  image: "/assets/garmin/f-nix-6-pro.webp"
+- name: fēnix 6 Pro Dual Power
+  image: "/assets/garmin/f-nix-6-pro-dual-power.webp"
+- name: fēnix 6 Pro Solar
+  image: "/assets/garmin/f-nix-6-pro-solar.webp"
+- name: fēnix 6 Solar
+  image: "/assets/garmin/f-nix-6-solar.webp"
+- name: fēnix 6S
+  image: "/assets/garmin/f-nix-6s.webp"
+- name: fēnix 6S Dual Power
+  image: "/assets/garmin/f-nix-6s-dual-power.webp"
+- name: fēnix 6S Pro
+  image: "/assets/garmin/f-nix-6s-pro.webp"
+- name: fēnix 6S Pro Dual Power
+  image: "/assets/garmin/f-nix-6s-pro-dual-power.webp"
+- name: fēnix 6S Pro Solar
+  image: "/assets/garmin/f-nix-6s-pro-solar.webp"
+- name: fēnix 6S Solar
+  image: "/assets/garmin/f-nix-6s-solar.webp"
+- name: fēnix 6X Pro
+  image: "/assets/garmin/f-nix-6x-pro.webp"
+- name: fēnix 7
+  image: "/assets/garmin/f-nix-7.webp"
+- name: fēnix 7 Pro
+  image: "/assets/garmin/f-nix-7-pro.webp"
+- name: fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  image: "/assets/garmin/f-nix-7-pro-solar-edition-no-wi-fi.webp"
+- name: fēnix 7S
+  image: "/assets/garmin/f-nix-7s.webp"
+- name: fēnix 7S Pro
+  image: "/assets/garmin/f-nix-7s-pro.webp"
+- name: fēnix 7X
+  image: "/assets/garmin/f-nix-7x.webp"
+- name: fēnix 7X Pro
+  image: "/assets/garmin/f-nix-7x-pro.webp"
+- name: fēnix 7X Pro No Wi-Fi
+  image: "/assets/garmin/f-nix-7x-pro-no-wi-fi.webp"
+- name: fēnix 8 AMOLED (43mm)
+  image: "/assets/garmin/f-nix-8-amoled-43mm.webp"
+- name: fēnix 8 AMOLED (47mm/51mm)
+  image: "/assets/garmin/f-nix-8-amoled-47mm-51mm.webp"
+- name: fēnix 8 Pro
+  image: "/assets/garmin/f-nix-8-pro.webp"
+- name: fēnix 8 Solar (47mm)
+  image: "/assets/garmin/f-nix-8-solar-47mm.webp"
+- name: fēnix 8 Solar (51mm)
+  image: "/assets/garmin/f-nix-8-solar-51mm.webp"
+- name: fenix 9 - 43 mm
+  image: "/assets/garmin/fenix-9-43-mm.webp"
+- name: fenix 9 Pro - 43 mm
+  image: "/assets/garmin/fenix-9-pro-43-mm.webp"
+- name: fenix 9 Pro - 47 mm
+  image: "/assets/garmin/fenix-9-pro-47-mm.webp"
+- name: fenix 9 Pro - 51 mm
+  image: "/assets/garmin/fenix-9-pro-51-mm.webp"
+- name: fenix 9 Pro - Solar 47 mm
+  image: "/assets/garmin/fenix-9-pro-solar-47-mm.webp"
+- name: fenix 9 Pro - Solar 51 mm
+  image: "/assets/garmin/fenix-9-pro-solar-51-mm.webp"
+- name: fenix 9 – 47 mm
+  image: "/assets/garmin/fenix-9-47-mm.webp"
+- name: fēnix E
+  image: "/assets/garmin/f-nix-e.webp"
+- name: Forerunner 165
+  image: "/assets/garmin/forerunner-165.webp"
+- name: Forerunner 165 Music
+  image: "/assets/garmin/forerunner-165-music.webp"
+- name: Forerunner 170
+  image: "/assets/garmin/forerunner-170.webp"
+- name: Forerunner 170 Music
+  image: "/assets/garmin/forerunner-170-music.webp"
+- name: Forerunner 255
+  image: "/assets/garmin/forerunner-255.webp"
+- name: Forerunner 255 Music
+  image: "/assets/garmin/forerunner-255-music.webp"
+- name: Forerunner 255S
+  image: "/assets/garmin/forerunner-255s.webp"
+- name: Forerunner 255S Music
+  image: "/assets/garmin/forerunner-255s-music.webp"
+- name: Forerunner 265
+  image: "/assets/garmin/forerunner-265.webp"
+- name: Forerunner 265S
+  image: "/assets/garmin/forerunner-265s.webp"
+- name: Forerunner 570 - 42mm
+  image: "/assets/garmin/forerunner-570-42mm.webp"
+- name: Forerunner 570 - 47mm
+  image: "/assets/garmin/forerunner-570-47mm.webp"
+- name: Forerunner 70
+  image: "/assets/garmin/forerunner-70.webp"
+- name: Forerunner 945
+  image: "/assets/garmin/forerunner-945.webp"
+- name: Forerunner 955 Dual Power
+  image: "/assets/garmin/forerunner-955-dual-power.webp"
+- name: Forerunner 965
+  image: "/assets/garmin/forerunner-965.webp"
+- name: Forerunner 970
+  image: "/assets/garmin/forerunner-970.webp"
+- name: Instinct 3 – 45 mm, AMOLED
+  image: "/assets/garmin/instinct-3-45-mm-amoled.webp"
+- name: Instinct 3 – 45 mm, Solar
+  image: "/assets/garmin/instinct-3-45-mm-solar.webp"
+- name: Instinct 3 – 50 mm, AMOLED
+  image: "/assets/garmin/instinct-3-50-mm-amoled.webp"
+- name: Instinct 3 – 50 mm, Solar
+  image: "/assets/garmin/instinct-3-50-mm-solar.webp"
+- name: Instinct Crossover AMOLED
+  image: "/assets/garmin/instinct-crossover-amoled.webp"
+- name: Instinct E – 40 mm
+  image: "/assets/garmin/instinct-e-40-mm.webp"
+- name: Instinct E – 45 mm
+  image: "/assets/garmin/instinct-e-45-mm.webp"
+- name: MARQ (Gen 2)
+  image: "/assets/garmin/marq-gen-2.webp"
+- name: MARQ Aviator (Gen 2)
+  image: "/assets/garmin/marq-aviator-gen-2.webp"
+- name: MARQ Commander (Gen 2) – Carbon Edition
+  image: "/assets/garmin/marq-commander-gen-2-carbon-edition.webp"
+- name: Mercedes-Benz Venu 2
+  image: "/assets/garmin/mercedes-benz-venu-2.webp"
+- name: Mercedes-Benz Venu 2S
+  image: "/assets/garmin/mercedes-benz-venu-2s.webp"
+- name: quatix 6
+  image: "/assets/garmin/quatix-6.webp"
+- name: quatix 6X
+  image: "/assets/garmin/quatix-6x.webp"
+- name: tactix 7
+  image: "/assets/garmin/tactix-7.webp"
+- name: tactix 7 – AMOLED Edition
+  image: "/assets/garmin/tactix-7-amoled-edition.webp"
+- name: tactix 8 – 47 mm, AMOLED
+  image: "/assets/garmin/tactix-8-47-mm-amoled.webp"
+- name: tactix 8 – 51 mm, Solar
+  image: "/assets/garmin/tactix-8-51-mm-solar.webp"
+- name: Venu 2
+  image: "/assets/garmin/venu-2.webp"
+- name: Venu 2 Plus
+  image: "/assets/garmin/venu-2-plus.webp"
+- name: Venu 2S
+  image: "/assets/garmin/venu-2s.webp"
+- name: Venu 3
+  image: "/assets/garmin/venu-3.webp"
+- name: Venu 3S
+  image: "/assets/garmin/venu-3s.webp"
+- name: Venu 4 – 41 mm
+  image: "/assets/garmin/venu-4-41-mm.webp"
+- name: Venu 4 – 45 mm
+  image: "/assets/garmin/venu-4-45-mm.webp"
+- name: Venu Sq. 2
+  image: "/assets/garmin/venu-sq-2.webp"
+- name: Venu Sq. 2 Music
+  image: "/assets/garmin/venu-sq-2-music.webp"
+- name: Venu X1
+  image: "/assets/garmin/venu-x1.webp"
+- name: vívoactive 5
+  image: "/assets/garmin/v-voactive-5.webp"
+- name: vívoactive 6
+  image: "/assets/garmin/v-voactive-6.webp"

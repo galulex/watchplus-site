@@ -1,25 +1,90 @@
 ---
 layout: default
-title: Watch+ — apps for Amazfit and Garmin watches
-description: Amazla Key, Authenticator, AmazWallet, HTTP, Walkie Talkie and more for Amazfit (Zepp OS) and Garmin watches. Free to install; Pro unlocks more in each app.
+title: "Watch+ · Apps for Amazfit and Garmin watches"
+description: Tesla keys, 2FA codes, loyalty cards, referee timers, walkie-talkies and more for Amazfit (Zepp OS) and Garmin watches. Free to install, with Pro in some.
 ---
+{% assign apps = site.apps | where: "kind", "app" | sort: "order" %}{% assign faces = site.apps | where: "kind", "watchface" | sort: "order" %}
+{% assign live = apps | where_exp: "a", "a.soon != true" %}
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker in">Amazfit · Garmin</span>
+      <h1 class="in" style="--i:1">Your watch can do <span class="grad">more.</span></h1>
+      <p class="lead in" style="--i:2">Unlock your Tesla, read 2FA codes, scan loyalty cards, run a match, talk to a friend. Small apps that do one thing well, built for Amazfit and Garmin watches.</p>
+      <div class="ctas in" style="--i:3"><a class="btn btn-main" href="#apps">Browse the apps</a><a class="btn btn-ghost" href="#faq">How Pro works</a></div>
+    </div>
+    <div class="orbit in" style="--i:2" aria-label="Our apps">
+      <div class="ring r1">{% for a in apps limit: 6 %}<a href="{{ a.url }}" style="--r:{{ forloop.index0 | times: 60 }}deg" aria-label="{{ a.name }}"><img src="/assets/apps/{{ a.slug }}/icon.webp" alt="" width="96" height="96"></a>{% endfor %}</div>
+      <div class="ring r2">{% for a in apps offset: 6 limit: 10 %}<a href="{{ a.url }}" style="--r:{{ forloop.index0 | times: 360 | divided_by: forloop.length }}deg" aria-label="{{ a.name }}"><img src="/assets/apps/{{ a.slug }}/icon.webp" alt="" width="96" height="96" loading="lazy"></a>{% endfor %}</div>
+      <div class="core"><div><b>{{ site.apps.size }}</b><span>apps &amp; faces</span></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat rise"><b>{{ live.size }}</b><span>apps in the stores</span></div>
+      <div class="stat rise"><b>{{ site.data.devices.size | plus: site.data.garmin.size }}</b><span>watch models supported</span></div>
+      <div class="stat rise"><b>0</b><span>ads, in any app</span></div>
+      <div class="stat rise"><b>14 days</b><span>refunds, no questions asked</span></div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">{% for k in (1..2) %}<div>{% for d in site.data.devices %}<span>{{ d.label | replace: "<br>", " " }}</span>{% endfor %}{% for d in site.data.garmin limit: 30 %}<span class="g">{{ d.name }}</span>{% endfor %}</div>{% endfor %}</div>
+</section>
 
-<h1>Apps for your smartwatch.</h1>
-<p class="lead">We build apps for Amazfit (Zepp OS) and Garmin watches. Every app is free to install. Some have a Pro upgrade with extra features.</p>
+<section class="sec wrap store" id="apps">
+  <div class="sec-head rise"><span class="kicker">The apps</span><h2 class="h2">Pick one. <span class="muted">Or five.</span></h2></div>
+  <div class="filters" role="radiogroup" aria-label="Filter apps">
+    <label><input type="radio" name="f" id="f-all" checked>All</label>
+    <label><input type="radio" name="f" id="f-amazfit">Amazfit</label>
+    <label><input type="radio" name="f" id="f-garmin">Garmin</label>
+    <label><input type="radio" name="f" id="f-pro">Pro</label>
+    <label><input type="radio" name="f" id="f-new">New</label>
+    <label><input type="radio" name="f" id="f-soon">Coming soon</label>
+  </div>
+  <div class="grid">{% for a in apps %}{% include card.html app=a %}{% endfor %}</div>
+</section>
 
-<h2 id="apps">Apps</h2>
-<div class="app-grid">
-{% assign apps = site.apps | where: "kind", "app" | sort: "order" %}{% for app in apps %}{% include card.html app=app %}{% endfor %}
-</div>
+<section class="sec wrap" id="faces">
+  <div class="sec-head rise"><span class="kicker">Watch faces</span><h2 class="h2">Faces with a shortcut.</h2></div>
+  {% for a in faces %}<a class="face rise" href="{{ a.url }}" style="--a:{{ a.accent }}">
+    <div><img class="fi" src="/assets/apps/{{ a.slug }}/icon.webp" alt="" width="64" height="64" loading="lazy" style="view-transition-name:icon-{{ a.slug }}"><h3>{{ a.name }}</h3><p>{{ a.pitch }}</p><div class="tags"><span class="tag">Amazfit</span>{% if a.garmin %}<span class="tag">Garmin · {{ a.garmin_name }}</span>{% endif %}<span class="tag">Free</span></div></div>
+    <div class="art"><img src="/assets/apps/{{ a.slug }}/face.webp" alt="{{ a.name }} on Amazfit" width="360" height="360" loading="lazy">{% if a.gshots %}<img src="/assets/apps/{{ a.slug }}/g1.webp" alt="{{ a.garmin_name }} on Garmin" width="480" height="637" loading="lazy">{% endif %}</div>
+  </a>{% endfor %}
+</section>
 
-<h2 id="watchfaces">Watch faces</h2>
-<div class="app-grid">
-{% assign faces = site.apps | where: "kind", "watchface" | sort: "order" %}{% for app in faces %}{% include card.html app=app %}{% endfor %}
-</div>
+<section class="sec wrap">
+  <div class="sec-head rise"><span class="kicker">How we build</span><h2 class="h2">Small apps. <span class="muted">Done properly.</span></h2></div>
+  <div class="bento">
+    <div class="cell w4 rise" style="--a:#1ad8ff"><div class="ic">⌚</div><h3>The watch does the work</h3><p>Amazla Key talks to your car over Bluetooth. Authenticator, Compass+, Luach and Referee+ work with no signal at all. The phone is for setup, not for every tap.</p></div>
+    <div class="cell w2 rise" style="--a:#7cf3a0"><div class="big">0</div><h3>ads</h3><p>And no trackers in the apps.</p></div>
+    <div class="cell w2 rise" style="--a:#c23bff"><div class="ic">🔓</div><h3>Free to install</h3><p>Every app works for free. Pro adds more.</p></div>
+    <div class="cell w2 rise" style="--a:#ff3b8b"><div class="ic">🙅</div><h3>No accounts</h3><p>Nothing to sign up for, unless the service needs it (like your Tesla).</p></div>
+    <div class="cell w2 rise" style="--a:#ffd23f"><div class="ic">✉️</div><h3>Real support</h3><p>Write to watch@ab.team and a developer answers.</p></div>
+  </div>
+</section>
 
-<h2 id="faq">How it works</h2>
-<div class="card"><h3>What do I get after paying?</h3><p>A license key. If you bought from the app's settings page it is entered for you; otherwise paste it there once. The watch unlocks within a few seconds.</p></div>
-<br>
-<div class="card"><h3>Which watch do I need?</h3><p>Any Amazfit running Zepp OS 2 or later. Some apps need hardware the watch must have (Bluetooth LE for Amazla Key, a microphone for voice apps) — each app's store listing says so.</p></div>
-<br>
-<div class="card"><h3>Refunds and support</h3><p>14 days, no questions asked — see the <a href="refunds.html">refund policy</a>. Anything else: <a href="mailto:watch@ab.team">watch@ab.team</a>, we answer within two business days.</p></div>
+<section class="sec wrap" id="pro">
+  <div class="sec-head rise"><span class="kicker">Pro</span><h2 class="h2">Unlock in three taps.</h2></div>
+  <div class="steps" style="--a:#fff">
+    <div class="step rise"><h3>Open the settings</h3><p>In the Zepp app on your phone, open the app’s settings page and tap Buy.</p></div>
+    <div class="step rise"><h3>Pay</h3><p>A secure checkout opens. Most Pro upgrades are one payment; a few that cost us money to run are monthly.</p></div>
+    <div class="step rise"><h3>It unlocks</h3><p>The watch unlocks in a few seconds. One purchase covers up to 3 watches.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="faq">
+  <div class="sec-head rise"><span class="kicker">Questions</span><h2 class="h2">Good to know.</h2></div>
+  <div class="faq">
+    <details class="rise"><summary>Which watch do I need?</summary><p>Any Amazfit on Zepp OS, or a recent Garmin for our Garmin apps. Each app page lists the exact models. Some apps need hardware: Bluetooth for Amazla Key, a microphone and speaker for voice apps.</p></details>
+    <details class="rise"><summary>How do I install an app?</summary><p>Tap Install on the app’s page on your phone, or open the Zepp app and go to Profile → App Store, then search for the name. For Garmin, use the Connect IQ store.</p></details>
+    <details class="rise"><summary>What do I get after paying?</summary><p>A license key. If you bought from the app’s settings page, it’s entered for you. If not, paste it there once. The watch unlocks within seconds.</p></details>
+    <details class="rise"><summary>I got a new watch. Do I pay again?</summary><p>No. One purchase covers up to 3 watches. Enter the same key on the new one.</p></details>
+    <details class="rise"><summary>Can I get a refund?</summary><p>Yes, within 14 days, no questions asked. See the <a href="/refunds.html" style="color:var(--cyan)">refund policy</a>.</p></details>
+    <details class="rise"><summary>Who makes these apps?</summary><p>Active Bridge, LLC, a small software company in Arizona. Questions or ideas: watch@ab.team. We answer within two business days.</p></details>
+  </div>
+</section>
+
+<section class="final"><div class="wrap">
+  <h2 class="rise">Make it <span class="grad">yours.</span></h2>
+  <p class="lead rise">{{ live.size }} apps, free to try. Start with the one you need most.</p>
+  <div class="ctas"><a class="btn btn-main" href="#apps">Browse the apps</a><a class="btn btn-ghost" href="mailto:watch@ab.team">Suggest an app</a></div>
+</div></section>

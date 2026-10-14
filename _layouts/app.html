@@ -1,36 +1,95 @@
 ---
 layout: default
 ---
-{% assign app = page %}{% assign id = app.slug %}
-{% assign shape = app.shape | default: "round" %}
-{% if shape == "square" %}{% assign frame = "Amazfit GTS 4" %}{% elsif shape == "band" %}{% assign frame = "Amazfit Band 7" %}{% else %}{% assign frame = "Amazfit GTR 4" %}{% endif %}
-{% assign frame = site.data.devices | where: "name", frame | first %}
-{% assign shots = app.shots | default: empty %}{% if shots.size == 0 and app.kind == "watchface" %}{% assign shots = app.icon | split: "|" %}{% endif %}
-<div class="card-open" aria-hidden="true" style="view-transition-name:app-card-{{ id }};view-transition-class:vt-card"></div>
-<div class="app-top">
-<div class="app-main">
-<div class="app-head">
-  <img class="app-icon big" src="{{ app.icon }}" alt="{{ app.name }}" style="view-transition-name:app-icon-{{ id }};view-transition-class:vt-icon">
-  <div>
-    <h1 style="view-transition-name:app-name-{{ id }};view-transition-class:vt-text">{{ app.name }}</h1>
-    <p class="lead" style="view-transition-name:app-desc-{{ id }};view-transition-class:vt-text">{{ app.tagline }}</p>
-    <p class="price-line">Free{% if app.pro %} · Pro {{ app.pro }}{% endif %}</p>
+{% assign app = page %}{% assign base = "/assets/apps/" | append: app.slug | append: "/" %}
+{% assign zn = app.shots | default: 0 %}{% assign gn = app.gshots | default: 0 %}
+{% if zn > 0 %}{% assign hp = "z" %}{% assign hn = zn %}{% else %}{% assign hp = "g" %}{% assign hn = gn %}{% endif %}
+{% if hn > 4 %}{% assign hn = 4 %}{% endif %}
+{% assign zepp_href = "amazfit://com.huami.watch.hmwatchmanager/action?name=appStore&target=detail&data=%7B%22id%22%3A%22" | append: app.zepp | append: "%22%7D" %}
+{% assign sup = site.data.support[app.slug] %}
+{% if hn > 1 %}{% assign p = 100.0 | divided_by: hn %}<style>.stage .shots{--slot:3.2s;--dur:calc({{ hn }}*3.2s)}@keyframes cyc{0%{opacity:0;scale:.94}{{ p | times: 0.14 | round: 2 }}%{opacity:1;scale:1}{{ p | round: 2 }}%{opacity:1;scale:1}{{ p | times: 1.14 | round: 2 }}%{opacity:0;scale:1.04}100%{opacity:0}}</style>{% endif %}
+
+<section class="app-hero">
+  <div class="wrap">
+    <div>
+      <nav class="crumbs in" aria-label="Breadcrumb"><a href="/#apps">Apps</a><span aria-hidden="true">/</span><span>{{ app.name }}</span></nav>
+      <div class="app-id in" style="--i:1">
+        <img src="{{ base }}icon.webp" alt="{{ app.name }} icon" width="84" height="84" fetchpriority="high" style="view-transition-name:icon-{{ app.slug }}">
+        <div><div class="nm">{{ app.name }}</div>
+          <div class="tags">{% if app.soon %}<span class="tag soon">Coming soon</span>{% elsif app.zepp %}<span class="tag">Amazfit</span>{% endif %}{% if app.garmin or app.os == "garmin" %}<span class="tag">Garmin</span>{% endif %}{% if app.pro %}<span class="tag pro">Pro</span>{% endif %}{% if app.new %}<span class="tag new">New</span>{% endif %}</div></div>
+      </div>
+      <h1 class="in" style="--i:2">{{ app.title | default: app.tagline }}</h1>
+      <p class="lead in" style="--i:3">{{ app.pitch }}</p>
+      <div class="ctas in" style="--i:4">
+        {% if app.zepp %}<a class="btn btn-main" href="{{ zepp_href }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>Install via Zepp</a>
+        {% elsif app.soon %}<span class="btn btn-soon">{% if app.os == "garmin" %}Garmin{% else %}Amazfit{% endif %} · coming soon</span>{% endif %}
+        {% if app.garmin %}<a class="btn {% if app.zepp %}btn-ghost{% else %}btn-main{% endif %}" href="https://apps.garmin.com/apps/{{ app.garmin }}">Get on Garmin{% if app.garmin_name %} as “{{ app.garmin_name }}”{% endif %}</a>
+        {% elsif app.garmin_soon %}<span class="btn btn-soon">Garmin · coming soon</span>{% endif %}
+        {% if app.site %}<a class="btn btn-ghost" href="{{ app.site }}">{{ app.site_label | default: "Website" }} ↗</a>{% endif %}
+        {% if app.companion %}<a class="btn btn-ghost" href="{{ app.companion }}">{{ app.companion_label | default: "Web companion" }} ↗</a>{% endif %}
+      </div>
+      <p class="price in" style="--i:5"><b>Free</b> to install{% if app.pro %} · <b>{{ app.pro }}</b>{% endif %}{% if app.zepp %} · In the Zepp app: Profile → App Store → “{{ app.store_name | default: app.name }}”{% endif %}</p>
+    </div>
+    {% if hn > 0 %}<div class="stage in" style="--i:2">
+      <div class="shots">{% for i in (1..hn) %}<img src="{{ base }}{{ hp }}{{ i }}.webp" alt="{{ app.name }} screen {{ i }}" width="360" height="360"{% if i == 1 %} fetchpriority="high"{% else %} fetchpriority="low" loading="lazy"{% endif %} style="--i:{{ forloop.index0 }}">{% endfor %}</div>
+      {% for c in app.chips limit: 2 %}<div class="chip c{{ forloop.index0 }}">{{ c }}</div>{% endfor %}
+    </div>{% endif %}
   </div>
-</div>
-<div class="stores">
-  <a class="btn" href="amazfit://com.huami.watch.hmwatchmanager/action?name=appStore&amp;target=detail&amp;data=%7B%22id%22%3A%22{{ app.zepp }}%22%7D">Install via Zepp</a>
-  {% if app.garmin %}<a class="btn" href="https://apps.garmin.com/apps/{{ app.garmin }}">Get on Garmin</a>
-  {% else %}<span class="btn soon">Garmin · coming soon</span>{% endif %}
-</div>
-</div>
-{% if shots.size > 0 %}<div class="screenshots-mockup">
-<div class="mockup-scroll mockup-scroll--{{ shape }}">{% for s in shots %}<img src="{{ s }}" alt="Screenshot" loading="lazy">{% endfor %}</div>
-<img class="mockup-device" src="{{ frame.image }}" alt="" aria-hidden="true" loading="lazy">
-</div>{% endif %}
-</div>
-<section><h2>Description</h2><div class="about">{{ content }}</div></section>
-<section><h2>Supported watches</h2>
-<div class="device-scroll-wrap"><div class="device-scroll">{% for d in site.data.devices %}{% unless app.devices_except contains d.name %}<div class="device-chip"><img src="{{ d.image }}" alt="{{ d.name }}" loading="lazy"><span>{{ d.label }}</span></div>{% endunless %}{% endfor %}</div></div>
 </section>
-<p class="muted">Not opening? In the Zepp app on your phone: Profile → App Store → search “{{ app.name }}”.</p>
-<p><a href="/#apps">← All apps</a></p>
+
+{% if app.facts %}<section class="wrap"><div class="facts" style="--n:{{ app.facts.size }}">{% for f in app.facts %}<div class="fact rise"><b>{{ f.v }}</b><span>{{ f.k }}</span></div>{% endfor %}</div></section>{% endif %}
+
+{% if app.features %}<section class="sec wrap" id="features">
+  <div class="sec-head rise"><span class="kicker">What it does</span><h2 class="h2">{{ app.features_title | default: "Everything, on your wrist." }}</h2></div>
+  <div class="bento">{% for f in app.features %}<div class="cell rise {% if f.w %}w{{ f.w }}{% endif %}"><div class="ic" aria-hidden="true">{{ f.i }}</div><h3>{{ f.t }}</h3><p>{{ f.d }}</p></div>{% endfor %}</div>
+</section>{% endif %}
+
+{% if zn > 1 or gn > 0 %}<section class="sec wrap" id="screens">
+  <div class="sec-head rise"><span class="kicker">Screens</span><h2 class="h2">Have a look.</h2></div>
+  {% if zn > 0 %}{% if gn > 0 %}<div class="subhead">On Amazfit</div>{% endif %}
+  <div class="rail" tabindex="0" aria-label="Amazfit screenshots">{% for i in (1..zn) %}<figure><img src="{{ base }}z{{ i }}.webp" alt="{{ app.name }} on Amazfit, screen {{ i }}" width="360" height="360" loading="lazy">{% if app.captions[forloop.index0] %}<figcaption>{{ app.captions[forloop.index0] }}</figcaption>{% endif %}</figure>{% endfor %}</div>{% endif %}
+  {% if gn > 0 %}<div class="subhead">On Garmin{% if app.garmin_name %} · {{ app.garmin_name }}{% endif %}</div>
+  <div class="rail g" tabindex="0" aria-label="Garmin screenshots">{% for i in (1..gn) %}<figure><img src="{{ base }}g{{ i }}.webp" alt="{{ app.name }} on Garmin, screen {{ i }}" loading="lazy" width="{{ app.gsize[0] | default: 480 }}" height="{{ app.gsize[1] | default: 480 }}"></figure>{% endfor %}</div>{% endif %}
+</section>{% endif %}
+
+{% if app.steps %}<section class="sec wrap" id="how">
+  <div class="sec-head rise"><span class="kicker">How it works</span><h2 class="h2">{{ app.steps_title | default: "Set up in a minute." }}</h2></div>
+  <div class="steps">{% for s in app.steps %}<div class="step rise"><h3>{{ s.t }}</h3><p>{{ s.d }}</p></div>{% endfor %}</div>
+</section>{% endif %}
+
+{% if app.plans %}<section class="sec wrap" id="pricing">
+  <div class="sec-head rise"><span class="kicker">Pricing</span><h2 class="h2">{{ app.plans_title | default: "Free to start." }}</h2></div>
+  <div class="plans" style="{% if app.plans.size > 2 %}grid-template-columns:repeat(auto-fit,minmax(260px,1fr)){% endif %}">{% for pl in app.plans %}<div class="plan rise{% if pl.pro %} pro{% endif %}"><h3>{{ pl.name }}</h3>{% if pl.price %}<div class="p">{{ pl.price }}{% if pl.per %} <small>{{ pl.per }}</small>{% endif %}</div>{% else %}<div class="p"><small>Unlock in the app</small></div>{% endif %}<ul>{% for it in pl.items %}<li>{{ it }}</li>{% endfor %}</ul></div>{% endfor %}</div>
+  <p class="muted rise" style="margin-top:18px;font-size:15px">{% if app.os == "garmin" %}Tap Get Pro on the watch to open the checkout on your phone, then paste the licence key into the app settings in Garmin Connect.{% else %}Buy on your phone, from the app’s settings page. The watch unlocks by itself.{% endif %} 14-day refunds, no questions. <a href="/refunds.html">Refund policy</a>.</p>
+</section>{% endif %}
+
+{% assign body = content | strip %}{% if body != "" %}<section class="sec wrap"><div class="sec-head rise"><span class="kicker">The story</span></div><div class="about rise">{{ content }}</div></section>{% endif %}
+
+{% if sup %}<section class="sec wrap" id="watches">
+  <div class="sec-head rise"><span class="kicker">Supported watches</span><h2 class="h2">Does it run on mine?</h2></div>
+  <div class="devs rise">
+    {% if sup.amazfit and sup.garmin %}<div class="tabs"><label><input type="radio" name="os" id="os-a" checked>Amazfit <small>{{ sup.amazfit.size }}</small></label><label><input type="radio" name="os" id="os-g">Garmin <small>{{ sup.garmin.size }}</small></label></div>
+    {% elsif sup.garmin %}<div class="tabs"><label><input type="radio" name="os" id="os-g" checked>Garmin <small>{{ sup.garmin.size }}</small></label></div>
+    {% else %}<div class="tabs"><label><input type="radio" name="os" id="os-a" checked>Amazfit <small>{{ sup.amazfit.size }}</small></label></div>{% endif %}
+    {% if sup.amazfit %}<div class="list a">{% for d in site.data.devices %}{% if sup.amazfit contains d.name %}<div class="dev"><img src="{{ d.image }}" alt="" width="64" height="64" loading="lazy">{{ d.label | replace: "<br>", " " }}</div>{% endif %}{% endfor %}</div>{% endif %}
+    {% if sup.garmin %}<div class="list g">{% for d in site.data.garmin %}{% if sup.garmin contains d.name %}<div class="dev"><img src="{{ d.image }}" alt="" width="64" height="64" loading="lazy">{{ d.name }}</div>{% endif %}{% endfor %}</div>{% endif %}
+  </div>
+  {% if app.soon %}<p class="muted" style="margin-top:16px;font-size:15px">The list for the first release. The store page has the final word.</p>{% endif %}
+</section>{% endif %}
+
+{% if app.faq %}<section class="sec wrap" id="faq">
+  <div class="sec-head rise"><span class="kicker">Questions</span><h2 class="h2">Good to know.</h2></div>
+  <div class="faq">{% for f in app.faq %}<details class="rise"><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div>
+</section>{% endif %}
+
+{% assign more = site.apps | where: "cat", app.cat | where_exp: "a", "a.slug != app.slug" %}{% if more.size == 0 %}{% assign more = site.apps | where_exp: "a", "a.slug != app.slug" | sort: "order" %}{% endif %}
+<section class="sec wrap"><div class="sec-head rise"><span class="kicker">More apps</span><h2 class="h2">You might also like.</h2></div>
+<div class="grid">{% for a in more limit: 3 %}{% include card.html app=a %}{% endfor %}</div></section>
+
+<section class="final"><div class="wrap">
+  <h2 class="rise">{{ app.final | default: "Try it." }}</h2>
+  <p class="lead rise">{% if app.soon %}In review now. Write to us and we’ll email you on release day.{% else %}Free to install. It takes a minute.{% endif %}</p>
+  <div class="ctas">{% if app.zepp %}<a class="btn btn-main" href="{{ zepp_href }}">Install via Zepp</a>{% elsif app.soon %}<a class="btn btn-main" href="mailto:watch@ab.team?subject={{ app.name | url_encode }}%20release">Tell me when it’s out</a>{% endif %}{% if app.garmin %}<a class="btn btn-ghost" href="https://apps.garmin.com/apps/{{ app.garmin }}">Get on Garmin</a>{% endif %}</div>
+</div></section>
+
+<div class="sticky"><img src="{{ base }}icon.webp" alt="" width="40" height="40" loading="lazy"><b>{{ app.name }}</b>{% if app.zepp %}<a class="btn btn-main" href="{{ zepp_href }}">Install</a>{% elsif app.garmin %}<a class="btn btn-main" href="https://apps.garmin.com/apps/{{ app.garmin }}">Get</a>{% else %}<a class="btn btn-main" href="mailto:watch@ab.team?subject={{ app.name | url_encode }}%20release">Notify me</a>{% endif %}</div>

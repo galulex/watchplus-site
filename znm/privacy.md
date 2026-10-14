@@ -4,7 +4,7 @@ title: ZNM — Privacy Policy
 description: ZNM collects nothing and sends nothing to us. Everything happens on your phone; it goes online only to fetch link previews.
 permalink: /znm/privacy.html
 ---
-<div class="legal" markdown="1">
+<div class="wrap legal" markdown="1">
 # ZNM — Privacy Policy
 
 _Last updated: 13 October 2026_
