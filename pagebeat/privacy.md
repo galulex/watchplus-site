@@ -46,6 +46,13 @@ Library, like any website, sees the request's IP address; its own
 [terms and privacy policy](https://archive.org/about/terms) apply to that. The cover is then kept
 on the watch.
 
+## Purchases
+
+Pagebeat's 7-day free trial and Pagebeat Pro are In-App Purchases made through Apple's App
+Store. Apple handles the payment and your Apple Account under its own privacy policy; we run no
+server for purchases and receive no payment details, name or email. The app only asks the App
+Store on your watch whether the trial or Pro is yours, and when the trial began.
+
 ## What the app shares
 
 Nothing with us, and nothing with anyone else beyond the Open Library lookup above. We do not

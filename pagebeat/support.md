@@ -44,6 +44,16 @@ catalogue. Check the title's spelling; until a cover is found, the book shows it
 **How do I start over?**
 Delete Pagebeat and install it again: everything it keeps is on the watch, so this clears it all.
 
+**How do the free trial and Pro work?**
+Pagebeat is free to try for 7 days: tap **START READING** and then **Start 7-day free trial**.
+After 7 days, reading sessions, heart rate, page logging and reminders need Pagebeat Pro, a
+one-time purchase (no subscription). Your books, progress and streak stay either way. The trial
+is tied to your Apple Account, so reinstalling doesn't restart it.
+
+**I bought Pro but it's locked.**
+Open the Pro screen (GET PRO on the home screen) and tap **Restore**, signed in with the Apple
+Account you bought it with. Refunds are handled by Apple: reportaproblem.apple.com.
+
 **Is it a medical device?**
 No. The heart rate is for your interest only and does not diagnose anything.
 
