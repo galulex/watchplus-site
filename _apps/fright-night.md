@@ -3,10 +3,13 @@ name: "Fright Night: Halloween"
 order: 25
 cat: life
 kind: app
-os: garmin
-soon: true
+new: true
 accent: "#f36f13"
 accent2: "#a78bfa"
+zepp: 174667
+garmin: 9f0e272d-06e2-4670-b2fa-bf21a9a23dbc
+store_name: Fright Night
+shots: 6
 tagline: A fright meter for horror night, from your heart rate
 title: How scared were you? <em>Your heart knows.</em>
 pitch: Everyone says horror movies don’t scare them. Fright Night turns your heart rate into a fright meter, catches every jump scare, and gives you a Scare Score when the credits roll.

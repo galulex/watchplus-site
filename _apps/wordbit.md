@@ -3,9 +3,10 @@ name: WordBit
 order: 18
 cat: life
 kind: app
-soon: true
+new: true
 accent: "#fdc84c"
 accent2: "#ff8b5c"
+zepp: 174185
 tagline: A new English word at every glance
 title: A new word <em>every glance.</em>
 pitch: Swipe to the WordBit card for a useful English word and its meaning. Open it for an example, then tap Know it or Again. The words you’re unsure of come back.

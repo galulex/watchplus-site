@@ -4,9 +4,10 @@ order: 21
 cat: life
 kind: app
 os: garmin
-soon: true
+new: true
 accent: "#c9a227"
 accent2: "#954716"
+garmin: 9edc130b-4995-460d-ae5e-1bd24ea1d0b4
 tagline: Today’s celebration, colour, holy days and fasting
 title: The liturgical day, <em>on your wrist.</em>
 pitch: "The day of the Roman Rite on your watch: the celebration, its rank and liturgical colour, whether it’s a holy day of obligation, and what fasting asks."

@@ -3,9 +3,10 @@ name: Voice AI
 order: 15
 cat: talk
 kind: app
-soon: true
+new: true
 accent: "#a78bfa"
 accent2: "#1ad8ff"
+zepp: 174647
 tagline: Ask Grok out loud, hear the answer
 title: Ask out loud. <em>Hear the answer.</em>
 pitch: Hold the button, ask anything, let go. Grok answers out loud through the watch speaker and on screen. No API key and no phone in your hand.

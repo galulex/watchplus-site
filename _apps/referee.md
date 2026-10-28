@@ -6,13 +6,13 @@ kind: app
 new: true
 accent: "#ffd23f"
 accent2: "#ff3b3b"
+garmin: 6b4f7bc4-712b-4a59-a7a7-77785ab6a134
 tagline: Match clock and buzzes for referees
 title: Eyes on the game. <em>Clock on the wrist.</em>
 pitch: A match clock built for referees. It adds up stoppage time when play stops, buzzes before each period ends, and never lets a sleeve end a half.
 zepp: 173997
 site: https://referee.ab.team
 site_label: referee.ab.team
-garmin_soon: true
 pro: Pro $4.99 once
 shots: 5
 chips: ["⏱️ Stoppage <span>tallied</span>", "📳 1 min left"]

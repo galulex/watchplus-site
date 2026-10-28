@@ -5,6 +5,7 @@ cat: tools
 kind: app
 accent: "#3d7bff"
 accent2: "#ffb03b"
+garmin: e130eafd-c2d5-43b0-bab0-6b6e49f21e01
 tagline: Scannable loyalty cards on your wrist
 title: Loyalty cards that <em>actually scan.</em>
 pitch: Your loyalty and membership cards as real barcodes on the watch, bright enough for the scanner at the till. Leave the phone in your pocket.

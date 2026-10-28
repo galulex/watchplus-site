@@ -4,9 +4,10 @@ order: 20
 cat: tools
 kind: app
 os: garmin
-soon: true
+new: true
 accent: "#f06819"
 accent2: "#3fd46a"
+garmin: ec88a5be-842a-4884-9eb1-dbffc43ee3ed
 tagline: Live pressure, 3-hour trend and storm alerts in your activity
 title: See the weather <em>turn.</em>
 pitch: Live barometric pressure on your activity screen, with the 3-hour trend and a storm alert. No phone, no internet; it runs on your watch’s own barometer.

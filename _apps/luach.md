@@ -3,9 +3,10 @@ name: Luach
 order: 17
 cat: life
 kind: app
-soon: true
+new: true
 accent: "#ff8b5c"
 accent2: "#ffd23f"
+zepp: 174665
 tagline: Hebrew date and zmanim on your wrist
 title: The Hebrew calendar, <em>on your wrist.</em>
 pitch: The Hebrew date, today’s zmanim, the parasha, candle lighting and havdalah, all worked out on the watch itself. No phone and no signal needed.

@@ -4,9 +4,10 @@ order: 22
 cat: life
 kind: app
 os: garmin
-soon: true
+new: true
 accent: "#e5ac05"
 accent2: "#c23b3b"
+garmin: f5b68939-0b0a-4497-a56b-fc036ecf267d
 tagline: Today’s feast, saints and fast rule
 title: Feast, saints and fast, <em>at a glance.</em>
 pitch: "The day of the Orthodox Church year on your watch: the feast, the saints and what the fast allows, in ten languages, new or old style."

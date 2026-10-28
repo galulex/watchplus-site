@@ -6,6 +6,7 @@ kind: app
 new: true
 accent: "#3fd46a"
 accent2: "#ffd23f"
+garmin: 505a3e69-6839-415d-9ca7-eed639767b86
 tagline: Tesla Powerwall live on your wrist
 title: Your home’s energy, <em>live.</em>
 pitch: Solar, grid, home and Powerwall in kW, with the battery charge and your backup reserve. One look at your wrist tells you where the power is going.

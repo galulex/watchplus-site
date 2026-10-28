@@ -1,4 +1,4 @@
-# Watches per app, from the Zepp and Garmin stores (2026-10-14). Names match devices.yml / garmin.yml.
+# Watches per app, from the Zepp and Garmin stores (2026-10-28). Names match devices.yml / garmin.yml.
 amazla-key:
   amazfit:
   - Amazfit Active
@@ -203,6 +203,64 @@ amazwallet:
   - Amazfit T-Rex 3 Pro (48mm)
   - Amazfit T-Rex Ultra
   - Amazfit T-Rex Ultra 2
+  garmin:
+  - Approach S50
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X10
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 965
+  - Forerunner 970
+  - Instinct 3 – 45 mm, AMOLED
+  - Instinct 3 – 50 mm, AMOLED
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix E
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - vívoactive 5
+  - vívoactive 6
 authenticator:
   amazfit:
   - Amazfit Active
@@ -445,6 +503,84 @@ powerwall:
   - Amazfit T-Rex 3 Pro (48mm)
   - Amazfit T-Rex Ultra
   - Amazfit T-Rex Ultra 2
+  garmin:
+  - Approach S50
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X10
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Enduro 2
+  - Enduro 3
+  - Enduro 4
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 255
+  - Forerunner 255 Music
+  - Forerunner 255S
+  - Forerunner 255S Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - Instinct 3 – 45 mm, AMOLED
+  - Instinct 3 – 50 mm, AMOLED
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - fēnix E
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+  - vívoactive 5
+  - vívoactive 6
 fall-guard:
   amazfit:
   - Amazfit Active
@@ -504,90 +640,168 @@ referee:
   - Amazfit T-Rex 3 Pro (48mm)
   - Amazfit T-Rex Ultra
   - Amazfit T-Rex Ultra 2
+  garmin:
+  - D2 Air X15
+  - D2 Mach 1 Pro
+  - Enduro
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 255
+  - Forerunner 255 Music
+  - Forerunner 255S
+  - Forerunner 255S Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 945
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - Instinct 3 – 45 mm, AMOLED
+  - Instinct 3 – 50 mm, AMOLED
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 6 Pro
+  - fēnix 6 Pro Dual Power
+  - fēnix 6 Pro Solar
+  - fēnix 6S Pro
+  - fēnix 6S Pro Dual Power
+  - fēnix 6S Pro Solar
+  - fēnix 6X Pro
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - fēnix E
+  - quatix 6
+  - quatix 6X
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+  - vívoactive 5
+  - vívoactive 6
 voice-ai:
   amazfit:
+  - Amazfit Active
+  - Amazfit Active 2 (Round)
+  - Amazfit Active 2 (Square)
   - Amazfit Active 3 Premium
-  - Amazfit T-Rex Ultra 2
   - Amazfit Active Max
+  - Amazfit Balance
+  - Amazfit Balance 2
+  - Amazfit Bip 5 Unity
+  - Amazfit Bip 6
+  - Amazfit Cheetah (Round)
+  - Amazfit Cheetah (Square)
+  - Amazfit Cheetah Pro
+  - Amazfit Falcon
+  - Amazfit GTR 4
+  - Amazfit GTS 4
+  - Amazfit T-Rex 3
   - Amazfit T-Rex 3 Pro (44mm)
   - Amazfit T-Rex 3 Pro (48mm)
-  - Amazfit Active 2 (Square)
-  - Amazfit Bip 6
-  - Amazfit Balance 2
-  - Amazfit Active 2 (Round)
-  - Amazfit Bip 5 Unity
-  - Amazfit T-Rex 3
-  - Amazfit Balance
-  - Amazfit Active
-  - Amazfit Cheetah (Square)
-  - Amazfit Cheetah (Round)
-  - Amazfit Cheetah Pro
-  - Amazfit GTS 4
-  - Amazfit GTR 4
   - Amazfit T-Rex Ultra
-  - Amazfit Falcon
+  - Amazfit T-Rex Ultra 2
 wordbit:
   amazfit:
+  - Amazfit Active
+  - Amazfit Active 2 (Round)
+  - Amazfit Active 2 (Square)
   - Amazfit Active 3 Premium
-  - Amazfit T-Rex Ultra 2
+  - Amazfit Active Edge
   - Amazfit Active Max
+  - Amazfit Balance
+  - Amazfit Balance 2
+  - Amazfit Band 7
+  - Amazfit Bip 5
+  - Amazfit Bip 5 Unity
+  - Amazfit Bip 6
+  - Amazfit Cheetah (Round)
+  - Amazfit Cheetah (Square)
+  - Amazfit Cheetah Pro
+  - Amazfit Falcon
+  - Amazfit GTR 3 Pro
+  - Amazfit GTR 4
+  - Amazfit GTR Mini
+  - Amazfit GTS 4
+  - Amazfit GTS 4 mini
+  - Amazfit T-Rex 2
+  - Amazfit T-Rex 3
   - Amazfit T-Rex 3 Pro (44mm)
   - Amazfit T-Rex 3 Pro (48mm)
-  - Amazfit Active 2 (Square)
-  - Amazfit Bip 6
-  - Amazfit Balance 2
-  - Amazfit Active 2 (Round)
-  - Amazfit Bip 5 Unity
-  - Amazfit T-Rex 3
-  - Amazfit Balance
-  - Amazfit Bip 5
-  - Amazfit Active Edge
-  - Amazfit Active
-  - Amazfit Cheetah (Square)
-  - Amazfit Cheetah (Round)
-  - Amazfit Cheetah Pro
-  - Amazfit GTS 4
-  - Amazfit GTR 4
   - Amazfit T-Rex Ultra
-  - Amazfit GTR 3 Pro
-  - Amazfit T-Rex 2
-  - Amazfit Falcon
-  - Amazfit Band 7
-  - Amazfit GTR Mini
-  - Amazfit GTS 4 mini
-  - Amazfit GTR 3
-  - Amazfit GTS 3
+  - Amazfit T-Rex Ultra 2
 luach:
   amazfit:
+  - Amazfit Active
+  - Amazfit Active 2 (Round)
+  - Amazfit Active 2 (Square)
   - Amazfit Active 3 Premium
-  - Amazfit T-Rex Ultra 2
+  - Amazfit Active Edge
   - Amazfit Active Max
+  - Amazfit Balance
+  - Amazfit Balance 2
+  - Amazfit Band 7
+  - Amazfit Bip 5
+  - Amazfit Bip 5 Unity
+  - Amazfit Bip 6
+  - Amazfit Cheetah (Round)
+  - Amazfit Cheetah (Square)
+  - Amazfit Cheetah Pro
+  - Amazfit Falcon
+  - Amazfit GTR 3
+  - Amazfit GTR 3 Pro
+  - Amazfit GTR 4
+  - Amazfit GTR Mini
+  - Amazfit GTS 3
+  - Amazfit GTS 4
+  - Amazfit GTS 4 mini
+  - Amazfit T-Rex 2
+  - Amazfit T-Rex 3
   - Amazfit T-Rex 3 Pro (44mm)
   - Amazfit T-Rex 3 Pro (48mm)
-  - Amazfit Active 2 (Square)
-  - Amazfit Bip 6
-  - Amazfit Balance 2
-  - Amazfit Active 2 (Round)
-  - Amazfit Bip 5 Unity
-  - Amazfit T-Rex 3
-  - Amazfit Balance
-  - Amazfit Bip 5
-  - Amazfit Active Edge
-  - Amazfit Active
-  - Amazfit Cheetah (Square)
-  - Amazfit Cheetah (Round)
-  - Amazfit Cheetah Pro
-  - Amazfit GTS 4
-  - Amazfit GTR 4
   - Amazfit T-Rex Ultra
-  - Amazfit GTR 3 Pro
-  - Amazfit T-Rex 2
-  - Amazfit Falcon
-  - Amazfit Band 7
-  - Amazfit GTR Mini
-  - Amazfit GTS 4 mini
-  - Amazfit GTR 3
-  - Amazfit GTS 3
+  - Amazfit T-Rex Ultra 2
 notify-plus:
   amazfit:
   - Amazfit Active 3 Premium
@@ -813,3 +1027,459 @@ metal-detector:
   - fēnix 7X
   - fenix 9 - 43 mm
   - fenix 9 – 47 mm
+georate:
+  garmin:
+  - Approach S50
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X10
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - fēnix E
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+  - vívoactive 5
+  - vívoactive 6
+barometer-edge:
+  garmin:
+  - D2 Air X15
+  - D2 Mach 1 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 255
+  - Forerunner 255 Music
+  - Forerunner 255S
+  - Forerunner 255S Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - Instinct 3 – 45 mm, AMOLED
+  - Instinct 3 – 45 mm, Solar
+  - Instinct 3 – 50 mm, AMOLED
+  - Instinct 3 – 50 mm, Solar
+  - Instinct Crossover AMOLED
+  - Instinct E – 40 mm
+  - Instinct E – 45 mm
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - fēnix E
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+  - vívoactive 6
+catholic-calendar:
+  garmin:
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Enduro
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 255
+  - Forerunner 255S
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 945
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 5
+  - fēnix 5 Plus
+  - fēnix 5S
+  - fēnix 5S Plus
+  - fēnix 5X
+  - fēnix 5X Plus
+  - fēnix 6
+  - fēnix 6 Dual Power
+  - fēnix 6 Pro
+  - fēnix 6 Pro Dual Power
+  - fēnix 6 Pro Solar
+  - fēnix 6 Solar
+  - fēnix 6S
+  - fēnix 6S Dual Power
+  - fēnix 6S Pro
+  - fēnix 6S Pro Dual Power
+  - fēnix 6S Pro Solar
+  - fēnix 6S Solar
+  - fēnix 6X Pro
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - quatix 6
+  - quatix 6X
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+orthodox-calendar:
+  garmin:
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Enduro
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 255
+  - Forerunner 255S
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 945
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 5
+  - fēnix 5 Plus
+  - fēnix 5S
+  - fēnix 5S Plus
+  - fēnix 5X
+  - fēnix 5X Plus
+  - fēnix 6
+  - fēnix 6 Dual Power
+  - fēnix 6 Pro
+  - fēnix 6 Pro Dual Power
+  - fēnix 6 Pro Solar
+  - fēnix 6 Solar
+  - fēnix 6S
+  - fēnix 6S Dual Power
+  - fēnix 6S Pro
+  - fēnix 6S Pro Dual Power
+  - fēnix 6S Pro Solar
+  - fēnix 6S Solar
+  - fēnix 6X Pro
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - quatix 6
+  - quatix 6X
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+horoscope:
+  garmin:
+  - Approach S50
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X10
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Enduro 2
+  - Enduro 3
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 955 Dual Power
+  - Forerunner 965
+  - Forerunner 970
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - Venu X1
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 Pro - Solar 47 mm
+  - fenix 9 Pro - Solar 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 7
+  - fēnix 7 Pro
+  - fēnix 7 Pro – Solar Edition (No Wi-Fi)
+  - fēnix 7S
+  - fēnix 7S Pro
+  - fēnix 7X
+  - fēnix 7X Pro
+  - fēnix 7X Pro No Wi-Fi
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix 8 Solar (47mm)
+  - fēnix 8 Solar (51mm)
+  - fēnix E
+  - tactix 7
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - tactix 8 – 51 mm, Solar
+  - vívoactive 5
+  - vívoactive 6
+fright-night:
+  garmin:
+  - Approach S50
+  - Approach S70 (42mm)
+  - Approach S70 (47mm)
+  - D2 Air X10
+  - D2 Air X15
+  - D2 Mach 1
+  - D2 Mach 1 Pro
+  - D2 Mach 2
+  - D2 Mach 2 Pro
+  - Descent G2
+  - Descent MK3 - 43mm
+  - Descent MK3i - 51mm
+  - Forerunner 165
+  - Forerunner 165 Music
+  - Forerunner 170
+  - Forerunner 170 Music
+  - Forerunner 265
+  - Forerunner 265S
+  - Forerunner 570 - 42mm
+  - Forerunner 570 - 47mm
+  - Forerunner 70
+  - Forerunner 965
+  - Forerunner 970
+  - Instinct 3 – 45 mm, AMOLED
+  - Instinct 3 – 50 mm, AMOLED
+  - Instinct Crossover AMOLED
+  - MARQ (Gen 2)
+  - MARQ Aviator (Gen 2)
+  - MARQ Commander (Gen 2) – Carbon Edition
+  - Mercedes-Benz Venu 2
+  - Mercedes-Benz Venu 2S
+  - Venu 2
+  - Venu 2 Plus
+  - Venu 2S
+  - Venu 3
+  - Venu 3S
+  - Venu 4 – 41 mm
+  - Venu 4 – 45 mm
+  - Venu Sq. 2
+  - Venu Sq. 2 Music
+  - epix (Gen 2)
+  - epix Pro (42mm)
+  - epix Pro (47mm)
+  - epix Pro (51mm)
+  - fenix 9 - 43 mm
+  - fenix 9 Pro - 43 mm
+  - fenix 9 Pro - 47 mm
+  - fenix 9 Pro - 51 mm
+  - fenix 9 – 47 mm
+  - fēnix 8 AMOLED (43mm)
+  - fēnix 8 AMOLED (47mm/51mm)
+  - fēnix 8 Pro
+  - fēnix E
+  - tactix 7 – AMOLED Edition
+  - tactix 8 – 47 mm, AMOLED
+  - vívoactive 5
+  - vívoactive 6
+  amazfit:
+  - Amazfit Active
+  - Amazfit Active 2 (Round)
+  - Amazfit Active 2 (Square)
+  - Amazfit Active 3 Premium
+  - Amazfit Active Edge
+  - Amazfit Active Max
+  - Amazfit Balance
+  - Amazfit Balance 2
+  - Amazfit Bip 5
+  - Amazfit Bip 5 Unity
+  - Amazfit Bip 6
+  - Amazfit Cheetah (Round)
+  - Amazfit Cheetah (Square)
+  - Amazfit Cheetah Pro
+  - Amazfit Falcon
+  - Amazfit GTR 3
+  - Amazfit GTR 3 Pro
+  - Amazfit GTR 4
+  - Amazfit GTS 3
+  - Amazfit GTS 4
+  - Amazfit T-Rex 2
+  - Amazfit T-Rex 3
+  - Amazfit T-Rex 3 Pro (44mm)
+  - Amazfit T-Rex 3 Pro (48mm)
+  - Amazfit T-Rex Ultra
+  - Amazfit T-Rex Ultra 2

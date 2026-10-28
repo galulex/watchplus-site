@@ -4,9 +4,10 @@ order: 19
 cat: tools
 kind: app
 os: garmin
-soon: true
+new: true
 accent: "#fdac01"
 accent2: "#1ad8ff"
+garmin: 504480c1-2b31-47ca-87ed-097d88971690
 tagline: Knows which country you’re in and converts its currency
 title: Cross a border. <em>The rate is there.</em>
 pitch: A currency converter that knows where you are. Set your home currency once; GPS picks the local one. No scrolling through 150 currencies, no picking a pair.

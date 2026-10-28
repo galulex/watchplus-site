@@ -4,9 +4,10 @@ order: 24
 cat: life
 kind: app
 os: garmin
-soon: true
+new: true
 accent: "#fec53c"
 accent2: "#7a5cff"
+garmin: 137a4c0a-b5c5-46fa-8cf0-ce4ea520792e
 tagline: Your daily horoscope every morning
 title: Your stars, <em>every morning.</em>
 pitch: Choose your sign once and each day starts with a fresh reading on your wrist. No phone, no scrolling.
