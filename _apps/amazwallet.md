@@ -34,6 +34,7 @@ plans:
 faq:
   - { q: "Will the scanner read my watch?", a: "Most till scanners read a watch screen fine. Tap the card to go full screen at full brightness. Some old laser scanners can’t read any screen." }
   - { q: "Which codes does it support?", a: "EAN-13, EAN-8, UPC-A, Code 39, Code 128 and QR." }
+  - { q: "Can I add a card from a screenshot?", a: "Yes. When adding a card in the Zepp app, tap 📷 in the code field and pick a screenshot or photo of the barcode. The number and code type fill in for you." }
   - { q: "How do passes work?", a: "With Pro, upload the .pkpass file or a screenshot of the pass in the Zepp app. The watch shows it as a scannable QR code." }
   - { q: "What happens at 5 cards?", a: "You keep every card you have. Pro only lifts the limit on adding more." }
 final: Pay. Scan. Go.
