@@ -45,7 +45,7 @@ Garmin Varia and rear radars with the same Bluetooth profile. Another one? Write
 model and we'll look at adding it.
 
 **Where are the settings?**
-On the watch: swipe up from the ride screen. Alerts, screen, car dots, your speed and logs.
+On the watch: swipe up from the ride screen. Alerts, screen, car dots, your speed, units (km/h and metres or mph and feet) and logs.
 
 **How do the free ride and Pro work?**
 One ride a day is free, with every feature. It counts from the day's first link to the radar, and
