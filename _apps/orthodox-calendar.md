@@ -3,10 +3,11 @@ name: Orthodox Calendar
 order: 22
 cat: life
 kind: app
-os: garmin
 new: true
 accent: "#e5ac05"
 accent2: "#c23b3b"
+zepp: 175856
+shots: 6
 garmin: f5b68939-0b0a-4497-a56b-fc036ecf267d
 tagline: Today’s feast, saints and fast rule
 title: Feast, saints and fast, <em>at a glance.</em>
@@ -24,10 +25,10 @@ features:
   - { i: "☦️", t: "Feast and saints", d: "Today’s feast or saint of the day, plus one or two more.", w: 3 }
   - { i: "🍞", t: "Fast rule", d: "A coloured mark, from no fast to full abstention, with a short explanation.", w: 3 }
   - { i: "🖼️", t: "Frames", d: "Silver for great feasts, gold for the Twelve, festive for Pascha." }
-  - { i: "👀", t: "Glance", d: "Today’s feast and fast without opening the app." }
+  - { i: "👀", t: "Widget card", d: "Today’s feast and fast without opening the app." }
   - { i: "🔔", t: "Notifications (Pro)", d: "“Feast today” in the morning, “Feast tomorrow” in the evening." }
 plans:
-  - { name: "Free", price: "$0", items: ["Today’s feast, saints and fast", "Tomorrow in the calendar", "Any language, either style", "Glance"] }
+  - { name: "Free", price: "$0", items: ["Today’s feast, saints and fast", "Tomorrow in the calendar", "Any language, either style", "Widget card or glance"] }
   - { name: "Pro", pro: true, items: ["The whole calendar, any day", "Two daily notifications at your time"] }
 faq:
   - { q: "Whose fasting rule is it?", a: "Common parish practice. Ask your priest about your own rule." }
